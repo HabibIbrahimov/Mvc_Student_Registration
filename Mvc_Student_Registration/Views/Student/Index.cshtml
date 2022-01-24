@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Mvc_Student_Registration.Models.Table>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StuName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StuLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StuGmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StuImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StuAddress)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StuName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StuLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StuGmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StuImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StuAddress)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StuId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StuId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StuId })
+        </td>
+    </tr>
+}
+
+</table>
