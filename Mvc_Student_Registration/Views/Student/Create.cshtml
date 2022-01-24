@@ -12,13 +12,12 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Table</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.StuName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.StuName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.StuName, new { htmlAttributes = new { @class = "form-control", Placeholder = "Enter Name" } })
                 @Html.ValidationMessageFor(model => model.StuName, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -26,7 +25,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.StuLastName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.StuLastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.StuLastName, new { htmlAttributes = new { @class = "form-control", Placeholder = "Enter LastName" } })
                 @Html.ValidationMessageFor(model => model.StuLastName, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -34,7 +33,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.StuGmail, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.StuGmail, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.StuGmail, new { htmlAttributes = new { @class = "form-control", Placeholder = "Enter Gmail" } })
                 @Html.ValidationMessageFor(model => model.StuGmail, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -42,7 +41,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.StuImage, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.StuImage, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.StuImage, new { htmlAttributes = new { @class = "form-control", Placeholder = "Image Url" } })
                 @Html.ValidationMessageFor(model => model.StuImage, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -50,14 +49,14 @@
         <div class="form-group">
             @Html.LabelFor(model => model.StuAddress, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.StuAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.StuAddress, new { htmlAttributes = new { @class = "form-control",Placeholder="Enter Address" }})
                 @Html.ValidationMessageFor(model => model.StuAddress, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-info" />
             </div>
         </div>
     </div>
